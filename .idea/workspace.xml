@@ -9,13 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eea9622f-3ba6-4107-91c0-183218b3ff10" name="Changes" comment="added report.pdf">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="eea9622f-3ba6-4107-91c0-183218b3ff10" name="Changes" comment="database update.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/OrderAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/dto/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.sql" afterDir="false" />
     </list>
@@ -28,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,6 +47,11 @@
     &quot;accountId&quot;: &quot;cc86d66c-284d-4455-8df1-d7fb80ef7f94&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/model/dto/Address.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/model/dto/Product.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/model/dto/User.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -58,6 +64,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="3066wmqoQhhaOivsJ0lRIaZr1fC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,7 +76,6 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 11.0.8.executor": "Debug",
     "Tomcat Server.Tomcat.executor": "Debug",
     "git-widget-placeholder": "main",
@@ -293,7 +301,7 @@
       <workItem from="1756291522765" duration="104000" />
       <workItem from="1756291818744" duration="459000" />
       <workItem from="1756565269305" duration="95000" />
-      <workItem from="1756798542635" duration="10164000" />
+      <workItem from="1756798542635" duration="14661000" />
     </task>
     <task id="LOCAL-00001" summary="added intellij project.">
       <option name="closed" value="true" />
@@ -327,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752936642462</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="database update.">
+      <option name="closed" value="true" />
+      <created>1756813988300</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756813988300</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +354,7 @@
     <MESSAGE value="removed target" />
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="added report.pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="added report.pdf" />
+    <MESSAGE value="database update." />
+    <option name="LAST_COMMIT_MESSAGE" value="database update." />
   </component>
 </project>

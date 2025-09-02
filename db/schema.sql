@@ -120,7 +120,8 @@ CREATE TABLE OrderProduct (
 );
 
 
-CREATE TABLE IF NOT EXISTS Review(
+DROP TABLE IF EXISTS Review;
+CREATE TABLE Review(
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     UserID              INT,
     ProductID           INT NOT NULL,
@@ -137,7 +138,8 @@ CREATE TABLE IF NOT EXISTS Review(
 );
 
 
-CREATE TABLE IF NOT EXISTS Cart(
+DROP TABLE IF EXISTS Cart;
+CREATE TABLE Cart(
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     UserID              INT UNIQUE NOT NULL,
 
@@ -147,7 +149,8 @@ CREATE TABLE IF NOT EXISTS Cart(
 );
 
 
-CREATE TABLE IF NOT EXISTS CartItem(
+DROP TABLE IF EXISTS CartItem;
+CREATE TABLE CartItem(
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     CartID              INT NOT NULL,
     ProductID           INT,
@@ -162,7 +165,8 @@ CREATE TABLE IF NOT EXISTS CartItem(
 );
 
 
-CREATE TABLE IF NOT EXISTS Wishlist(
+DROP TABLE IF EXISTS Whislist;
+CREATE TABLE Wishlist(
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     UserID              INT UNIQUE NOT NULL,
 
@@ -172,7 +176,8 @@ CREATE TABLE IF NOT EXISTS Wishlist(
 );
 
 
-CREATE TABLE IF NOT EXISTS WishlistItem(
+DROP TABLE IF EXISTS WishlistItem;
+CREATE TABLE WishlistItem(
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     WishlistID          INT NOT NULL,
     ProductID           INT,
