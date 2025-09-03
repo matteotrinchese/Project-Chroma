@@ -5,6 +5,9 @@ target/
 # Exclude actual config file
 /src/main/resources/config.properties
 
+# Exclude context.xml
+/src/main/webapp/META-INF/context.xml
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
@@ -48,3 +51,4 @@ build/
 /documents/report.out
 /src/main/WebContent/WEB-INF/lib/
 /src/main/WebContent/WEB-INF/classes/
+/src/main/webapp/META-INF/
