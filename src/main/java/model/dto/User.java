@@ -1,5 +1,7 @@
 package model.dto;
 
+import model.dto.enums.Role;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 

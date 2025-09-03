@@ -5,12 +5,12 @@ USE Chroma;
 DROP TABLE IF EXISTS User;
 CREATE TABLE User (
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
-    Username            VARCHAR(255) NOT NULL,
+    Username            VARCHAR(255) NOT NULL UNIQUE,
     Email               VARCHAR(255) NOT NULL UNIQUE,
     PasswordHash        VARCHAR(255) NOT NULL,
     Role                ENUM('Customer', 'Admin') DEFAULT 'Customer' NOT NULL,
     CreatedAt           TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    LastLogin           TIMESTAMP NOT NULL,
+    LastLogin           TIMESTAMP DEFAULT NULL,
     isActive            BOOLEAN NOT NULL NULL DEFAULT TRUE
 );
 
@@ -87,7 +87,7 @@ CREATE TABLE `Order` (
     TotalAmount         DECIMAL (10, 2) NOT NULL,
     ShippingAddressID   INT NOT NULL,
     BillingAddressID    INT NOT NULL,
-    Status              ENUM ('Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled') DEFAULT 'Pending',
+    OrderStatus         ENUM ('Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled') DEFAULT 'Pending',
 
     FOREIGN KEY (UserID) REFERENCES User (ID)
                     ON DELETE RESTRICT  -- Impedisce l'eliminazione di un utente se ha ordini associati
@@ -101,15 +101,15 @@ CREATE TABLE `Order` (
 );
 
 
-DROP TABLE IF EXISTS OrderProduct;
-CREATE TABLE OrderProduct (
+DROP TABLE IF EXISTS OrderItem;
+CREATE TABLE OrderItem (
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     OrderID             INT NOT NULL,
     ProductID           INT,
-    Name                VARCHAR(255) NOT NULL,
-    Price               DECIMAL(10, 2) NOT NULL,
-    VAT                 INT NOT NULL,
-    Quantity            INT NOT NULL CHECK (Quantity > 0),
+    ProductName            VARCHAR(255) NOT NULL,
+    ProductPrice           DECIMAL(10, 2) NOT NULL,
+    ProductVAT             INT NOT NULL,
+    ProductQuantity        INT NOT NULL CHECK (ProductQuantity > 0),
 
     FOREIGN KEY (OrderID) REFERENCES `Order`(ID)
                           ON DELETE CASCADE
@@ -154,7 +154,7 @@ CREATE TABLE CartItem(
     ID                  INT AUTO_INCREMENT PRIMARY KEY,
     CartID              INT NOT NULL,
     ProductID           INT,
-    Quantity            INT NOT NULL CHECK ( Quantity > 0 ),
+    ProductQuantity     INT NOT NULL CHECK ( ProductQuantity > 0 ),
 
     FOREIGN KEY (CartID) REFERENCES Cart(ID)
                                    ON DELETE CASCADE
